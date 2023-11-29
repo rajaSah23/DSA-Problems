@@ -19,6 +19,8 @@ GeeksForGeeks: https://auth.geeksforgeeks.org/user/rajasah9vuf/
 <br>
 8. <a href="https://leetcode.com/submissions/detail/1108681033/">Insert into a Binary Search Tree</a> 
 <br>
+9. <a href="https://leetcode.com/submissions/detail/1108782063/">Path Sum</a> 
+<br>
 
 
 
