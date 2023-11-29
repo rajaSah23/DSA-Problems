@@ -17,6 +17,8 @@ GeeksForGeeks: https://auth.geeksforgeeks.org/user/rajasah9vuf/
 <br>
 7. <a href="https://leetcode.com/submissions/detail/1108668150/">Rotate Image</a> 
 <br>
+8. <a href="https://leetcode.com/submissions/detail/1108681033/">Insert into a Binary Search Tree</a> 
+<br>
 
 
 
