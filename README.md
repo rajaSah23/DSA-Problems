@@ -15,6 +15,8 @@ GeeksForGeeks: https://auth.geeksforgeeks.org/user/rajasah9vuf/
 <br>
 6. <a href="https://leetcode.com/submissions/detail/1108655723/">Set Matrix Zeroes</a> 
 <br>
+7. <a href="https://leetcode.com/submissions/detail/1108668150/">Rotate Image</a> 
+<br>
 
 
 
