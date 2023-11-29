@@ -13,6 +13,8 @@ GeeksForGeeks: https://auth.geeksforgeeks.org/user/rajasah9vuf/
 <br>
 5. <a href="https://leetcode.com/submissions/detail/1108113939/">Reverse Bits</a> 
 <br>
+6. <a href="https://leetcode.com/submissions/detail/1108655723/">Set Matrix Zeroes</a> 
+<br>
 
 
 
