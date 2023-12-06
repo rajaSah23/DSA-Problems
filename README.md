@@ -21,6 +21,8 @@ GeeksForGeeks: https://auth.geeksforgeeks.org/user/rajasah9vuf/
 <br>
 9. <a href="https://leetcode.com/submissions/detail/1108782063/">Path Sum</a> 
 <br>
+9. <a href="https://leetcode.com/submissions/detail/1113507358/">Calculate Money</a> 
+<br>
 
 
 
