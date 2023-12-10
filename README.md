@@ -25,6 +25,8 @@ GeeksForGeeks: https://auth.geeksforgeeks.org/user/rajasah9vuf/
 <br>
 11. <a href="https://leetcode.com/submissions/detail/1114297982/">Largest Odd Number in String</a> 
 <br>
+12. <a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/">Find All Numbers Disappeared in an Array</a> 
+<br>
 
 
 
