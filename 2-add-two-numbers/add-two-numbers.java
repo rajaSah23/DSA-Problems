@@ -12,8 +12,8 @@ class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int carry=0;
         int sum=0;
-        ListNode ansHead=null;
-        ListNode tail=null;
+        ListNode ansHead=new ListNode(0); //dummy node
+        ListNode tail=ansHead;
         while(l1!=null || l2!=null){
             sum+=carry;
             
@@ -27,20 +27,14 @@ class Solution {
             }
 
             //put into ans List
-            if(ansHead==null){
-                ansHead= new ListNode(sum%10);
-                tail=ansHead;
-            }else{
                 tail.next=new ListNode(sum%10);
                 tail=tail.next;
-            }
-            
             
             carry=sum/10;
             sum=0;
         }
         //agar carry me abhi bhi value hoga to
         if(carry>0)  tail.next=new ListNode(carry);
-        return ansHead;
+        return ansHead.next;
     }
 }
