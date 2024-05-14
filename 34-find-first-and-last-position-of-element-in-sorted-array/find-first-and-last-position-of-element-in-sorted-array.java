@@ -1,15 +1,21 @@
 class Solution {
     public int[] searchRange(int[] nums, int target) {
         int[] ans= {-1,-1};
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]==target){
+        int l=0,r=nums.length-1;
+        while(l<=r){
+            int mid= (l+r)/2;
+            if(nums[mid]==target){
+                int i=mid,j=mid;
+                while(i>=0 && nums[i]==target) i--;
+                while(j<nums.length && nums[j] == target) j++;
+                i++;
+                j--;
                 ans[0]=i;
-                while(i<nums.length && nums[i]==target)
-                    i++;
-                ans[1]=i-1;
-
+                ans[1]=j;
                 return ans;
             }
+            if(target<nums[mid]) r=mid-1;
+            else l= mid+1;
         }
         return ans;
     }
