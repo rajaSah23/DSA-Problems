@@ -10,23 +10,21 @@
  */
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        int size=0;
-        ListNode h=head;
+        ListNode h= head;
+        int size = 0;
         while(h!=null){
             size++;
             h=h.next;
         }
-        
-        int N= size-n-1;
-        //Chalo ab Taget Node k pass (N'th from begin)
+        n= size-n;
         h=head;
-        while(N>0){
-            h=h.next;
-            N--;
+        while(n>1){
+            h= h.next;
+            n--;
         }
-        if(N<0) return head.next;//-ve N matlb 1st wala node delete krna h
-        
-        h.next=h.next.next;
+
+        if(n==0) return head.next;
+        h.next = h.next.next;
         return head;
     }
 }
