@@ -1,25 +1,29 @@
 class Solution {
-    boolean canEat(int[] piles, int k, int h){
-        int time=0;
+    boolean canEat(int k,int[] piles, int h){
+        int time =0;
         for(int pile:piles){
-            if(pile%k==0) time+=pile/k;
-            else time+=pile/k +1;
+            time+= pile/k;
+
+            if(pile%k > 0) time++;
         }
         return time<=h;
     }
     public int minEatingSpeed(int[] piles, int h) {
-        //Search space : 1,2,3,4,5,...11
-        int l=1;
-        int r=0;
+        //search space : 1,2,3,...,Max in piles[]
+        int maxSpeed = piles[0];
         for(int pile:piles)
-            r=Math.max(r,pile);
+            maxSpeed = Math.max(pile,maxSpeed);
+        
+        int l=1;
+        int r=maxSpeed;
 
         while(l<r){
-            int mid= l+(r-l)/2;
-            if(canEat(piles,mid,h))
+            int mid = l+(r-l)/2;
+            if(canEat(mid,piles,h)){
                 r=mid;
-            else
+            }else{
                 l=mid+1;
+            }
         }
         return l;
     }
