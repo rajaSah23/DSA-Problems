@@ -11,25 +11,22 @@
  */
 public class Solution {
     public ListNode detectCycle(ListNode head) {
+        if(head==null || head.next==null) return null;
         ListNode slow=head;
-        ListNode fast=head;
-        while(fast!=null && fast.next!=null){
-            slow=slow.next;
+        ListNode fast= head.next;
+        while(fast!=null && fast.next!=null && slow!=fast ){
+            slow= slow.next;
             fast=fast.next.next;
-
-            if(slow==fast){ //loop detected
-                break;
-            }
         }
-        if(fast==null || fast.next==null) return null;//agar loop nhi h
-
-        //agar loop hoga to
-        slow=head;
-        //slow(at head) aur fast dono ko ek ek krke aage badhao, jaha pe milega whi connect point hoga   
-        while(slow!= fast){
+        if(fast==null || fast.next==null ) return null;
+        
+        slow= slow.next;
+        while(head!=slow){
+            head=head.next;
             slow=slow.next;
-            fast=fast.next;
         }
-        return slow;
+        return head;
+
+
     }
 }
