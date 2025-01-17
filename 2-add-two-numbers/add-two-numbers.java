@@ -10,31 +10,38 @@
  */
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        int carry=0;
-        int sum=0;
-        ListNode ansHead=new ListNode(0); //dummy node
-        ListNode tail=ansHead;
-        while(l1!=null || l2!=null){
-            sum+=carry;
-            
-            if(l1!=null){  //list 1
-                sum+=l1.val;
-                l1=l1.next;
-            }
-            if(l2!=null){  //list 2
-                sum+=l2.val;
-                l2=l2.next;
-            }
+        ListNode h1 =l1;
+        ListNode h2 =l2;
 
-            //put into ans List
-                tail.next=new ListNode(sum%10);
-                tail=tail.next;
-            
-            carry=sum/10;
-            sum=0;
+        ListNode ansHead= new ListNode(0);
+        ListNode ansTail= ansHead;
+        int borrow=0;
+        while(h1!=null && h2!=null ){
+            int sum =h1.val+h2.val+borrow;
+            ansTail.next= new ListNode(sum%10 );
+            borrow=sum/10;
+            ansTail=ansTail.next;
+            h1=h1.next;
+            h2=h2.next;
         }
-        //agar carry me abhi bhi value hoga to
-        if(carry>0)  tail.next=new ListNode(carry);
+        while(h1!=null){
+                int sum =h1.val+borrow;
+                ansTail.next= new ListNode( sum%10 );
+                borrow=sum/10;
+                ansTail=ansTail.next;
+                h1=h1.next;
+        }
+        while(h2!=null){
+            int sum =h2.val+borrow;
+                ansTail.next= new ListNode( sum%10 );
+                borrow=sum/10;
+                ansTail=ansTail.next;
+                h2=h2.next;
+        }
+        if(borrow!=0){
+            ansTail.next= new ListNode(borrow%10);
+            ansTail=ansTail.next;
+        }
         return ansHead.next;
     }
 }
